@@ -2,7 +2,7 @@
 ### Intelligent Voice Memo Task Manager
 
 <!-- Hero Image: Child Building Lego Castle with AI Flow Diagram Watermark -->
-![Project Hero Image](assets/creation.png)
+![Project Hero Image](assets/creation.jpg)
 
 Welcome to **TaskBuddy**, a pioneering project demonstrating how modern architectural principles and intelligent AI can transform everyday productivity. This isn't just another task manager; it's a foundation for a personalized, adaptive assistant that understands and organizes your world the way *you* do.
 
