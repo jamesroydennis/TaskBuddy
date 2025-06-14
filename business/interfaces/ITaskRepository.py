@@ -1,23 +1,24 @@
-from abc import ABC, abstractmethod
+# taskbuddy_project/business/interfaces/ITaskRepository.py
+
+from abc import abstractmethod
 from typing import List
-import uuid # For Task ID type hinting
+import uuid
+
+# Import the generic ICrudRepository and Task model
+from business.interfaces.ICrudRepository import ICrudRepository
 from business.task import Task
 
-
-class ITaskRepository(ABC):
+# ITaskRepository now inherits from ICrudRepository, specializing it for Task entities
+class ITaskRepository(ICrudRepository[Task]):
     """
     Abstract Base Class for Task Repositories.
     Defines the contract for any class that provides CRUD operations for Task objects.
+    It specializes the generic ICrudRepository for Task entities,
+    requiring task-specific method names.
     """
 
-    @abstractmethod
-    def get_all_tasks(self) -> List[Task]:
-        """
-        Retrieves all tasks from the repository.
-        Returns:
-            List[Task]: A list of Task objects.
-        """
-        pass
+    # These abstract methods mandate the task-specific naming for CRUD operations.
+    # They implicitly override the generic methods from ICrudRepository.
 
     @abstractmethod
     def add_task(self, task: Task):
@@ -25,6 +26,15 @@ class ITaskRepository(ABC):
         Adds a new task to the repository.
         Args:
             task (Task): The Task object to add.
+        """
+        pass
+
+    @abstractmethod
+    def get_all_tasks(self) -> List[Task]:
+        """
+        Retrieves all tasks from the repository.
+        Returns:
+            List[Task]: A list of Task objects.
         """
         pass
 
@@ -63,3 +73,4 @@ class ITaskRepository(ABC):
             ValueError: If no task with the given ID is found for deletion.
         """
         pass
+
