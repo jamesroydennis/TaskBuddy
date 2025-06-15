@@ -6,7 +6,7 @@ import uuid
 
 # Import the generic ICrudRepository and Task model
 from business.interfaces.ICrudRepository import ICrudRepository
-from business.task import Task
+from task import Task
 
 # ITaskRepository now inherits from ICrudRepository, specializing it for Task entities
 class ITaskRepository(ICrudRepository[Task]):

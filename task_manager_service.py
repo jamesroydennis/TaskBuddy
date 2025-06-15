@@ -4,7 +4,7 @@ from typing import List, Optional
 import uuid
 
 from business.interfaces.ITaskRepository import ITaskRepository
-from business.task import Task, TaskStatus
+from task import Task, TaskStatus
 
 from loguru import logger
 

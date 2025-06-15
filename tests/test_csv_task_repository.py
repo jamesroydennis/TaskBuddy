@@ -14,7 +14,7 @@ import config.loguru_setup
 from loguru import logger
 
 from data.csv_task_repository import CsvTaskRepository
-from business.task import Task, TaskStatus
+from task import Task, TaskStatus
 
 # Define the path to the read-only sample CSV data for source
 SAMPLE_CSV_SOURCE_PATH = os.path.join(

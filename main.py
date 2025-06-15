@@ -16,8 +16,8 @@ from core.dependency_container import DependencyContainer
 # Import the ITaskRepository interface (our specific task contract)
 from business.interfaces.ITaskRepository import ITaskRepository
 
-from business.task import Task
-from business.task_manager_service import TaskManagerService
+from task import Task
+from task_manager_service import TaskManagerService
 
 
 def configure_dependencies(container: DependencyContainer):

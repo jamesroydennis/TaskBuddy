@@ -11,7 +11,7 @@ from data.base_csv_repository import BaseCsvRepository
 from business.interfaces.ITaskRepository import ITaskRepository
 
 # Import Task model
-from business.task import Task, TaskStatus
+from task import Task, TaskStatus
 
 # Import Loguru's logger directly
 from loguru import logger
